@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.header {
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--ml-color);
+  @include media(tablet) {
+    height: 5.6rem;
+  }
+  &__image {
+    height: 100%;
+    &--logo {
+      width: 5rem;
+      height: 100%;
+      @include media(laptop) {
+        width: 15rem;
+      }
+    }
+  }
+  &__search {
+    width: 100%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    @include media(tablet) {
+      margin-left: 2rem;
+    }
+    input {
+      height: 100%;
+      width: 100%;
+      font-size: 1.6rem;
+      border: none;
+      outline: none;
+    }
+    &--icon {
+      width: 10%;
+      max-width: 5.7rem;
+      min-width: 2.6rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--body-background);
+      .icon {
+        width: 60%;
+        height: 60%;
+      }
+    }
+  }
+}

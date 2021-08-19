@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.breadcrumb-nav {
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+  --bs-breadcrumb-divider: '>';
+  &__items {
+    justify-content: center;
+    a {
+      text-decoration: none;
+    }
+    @include media(tablet) {
+      justify-content: flex-start;
+    }
+  }
+}

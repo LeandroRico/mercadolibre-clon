@@ -1,0 +1,15 @@
+@mixin media($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 36em) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media (min-width: 48em) {
+      @content;
+    }
+  } @else if $breakpoint == laptop-l {
+    @media (min-width: 78em) {
+      @content;
+    }
+  }
+}

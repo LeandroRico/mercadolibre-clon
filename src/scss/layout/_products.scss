@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.main {
+  margin: 2rem 0;
+  text-align: center;
+  @include media(tablet) {
+    text-align: start;
+  }
+  &__item {
+    margin: 0 auto;
+    border-bottom: 0.1rem solid var(--body-background);
+    text-decoration: none;
+    color: var(--color);
+    background-color: var(--white);
+    &--info {
+      @include media(tablet) {
+        display: flex;
+      }
+    }
+    &--location {
+      @include media(tablet) {
+        text-align: end;
+        margin-top: 4rem;
+      }
+    }
+    .product-image {
+      width: 18rem;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      @include media(tablet) {
+        margin: 0;
+        height: 100%;
+      }
+    }
+    .product-info {
+      margin-top: 2rem;
+      @include media(tablet) {
+        margin-top: 3rem;
+        margin-left: 2rem;
+      }
+    }
+    .price {
+      font-size: 2rem;
+      @include media(tablet) {
+        font-size: 2.5rem;
+      }
+    }
+    .title {
+      margin: 1rem 0;
+      font-size: 1.4rem;
+      @include media(tablet) {
+        font-size: 1.6rem;
+      }
+    }
+    .location {
+      font-size: 1.2rem;
+    }
+  }
+}
