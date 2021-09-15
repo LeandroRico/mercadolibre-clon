@@ -4,20 +4,12 @@ This project is a "mercadolibre" clone, using its API.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-  - [Link](#link)
+- [Screenshot](#screenshot)
 - [Built with](#built-with)
 
-## Overview
-
-### Screenshot
+## Screenshot
 
 ![](./src/images/screenshot.png)
-
-### Link
-
-- [Live Site URL](https://mercadolibre-clon.vercel.app/)
 
 ## Built with
 
