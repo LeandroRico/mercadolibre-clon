@@ -1,7 +1,7 @@
 export const initialState = {
   search: '',
-  products: [],
+  matchedProducts: [],
   product: {},
   description: '',
-  breadCrumbs: [],
+  breadcrumbs: [],
 };

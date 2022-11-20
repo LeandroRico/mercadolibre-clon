@@ -1,13 +1,14 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
-import { BiSearch } from 'react-icons/bi';
-import { getSearchedProducts } from '../actions';
-import Logo from '../images/logo__small@2x.png';
-import LogoXL from '../images/logo.png';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
+import { BiSearch } from "react-icons/bi";
+import { getMatchedProducts } from "../services";
+import { setMatchedProducts, setProduct } from "../redux/actions";
+import Logo from "../assets/logo__small@2x.png";
+import LogoXL from "../assets/logo.png";
 
 const Header = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -15,38 +16,39 @@ const Header = () => {
     setSearch(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(getSearchedProducts(search));
-    history.push('/');
+    const matchedProducts = await getMatchedProducts(search);
+    dispatch(setMatchedProducts(matchedProducts));
+    history.push("/products");
   };
 
   return (
-    <header className='container-fluid p-3 header'>
-      <div className='container'>
-        <Link to='/'>
-          <picture className='header__image'>
+    <header className="container-fluid p-3 header">
+      <div className="container">
+        <Link to="/">
+          <picture className="header__image">
             <source
-              media='(min-width: 48em)'
+              media="(min-width: 48em)"
               srcSet={LogoXL}
-              className='header__image--logo'
+              className="header__image--logo"
             />
             <img
               src={Logo}
-              alt='Mercado Libre Logo'
-              className='header__image--logo'
+              alt="Mercado Libre Logo"
+              className="header__image--logo"
             />
           </picture>
         </Link>
-        <form className='header__search' onSubmit={handleSubmit}>
+        <form className="header__search" onSubmit={handleSubmit}>
           <input
-            type='text'
-            placeholder='Nunca dejes de buscar'
-            className='ps-3'
+            type="text"
+            placeholder="Nunca dejes de buscar"
+            className="ps-3"
             onChange={handleChange}
           />
-          <div className='header__search--icon'>
-            <BiSearch className='icon' />
+          <div className="header__search--icon">
+            <BiSearch className="icon" />
           </div>
         </form>
       </div>

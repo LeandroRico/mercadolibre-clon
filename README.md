@@ -9,7 +9,7 @@ This project is a "mercadolibre" clone, using its API.
 
 ## Screenshot
 
-![](./src/images/screenshot.png)
+![](./src/assets/screenshot.png)
 
 ## Built with
 

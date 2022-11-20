@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import generateStore from './store';
+import generateStore from './redux/store';
 import App from './routes/App';
 
 const store = generateStore();
