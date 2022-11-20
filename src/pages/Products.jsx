@@ -6,7 +6,7 @@ import { setBreadcrumbs, setFilteredProducts } from "../redux/actions";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 const Products = () => {
-  const { matchedProducts, product } = useSelector((store) => store);
+  const { matchedProducts } = useSelector((store) => store);
   const dispatch = useDispatch();
   const params = useParams();
 

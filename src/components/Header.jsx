@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { getMatchedProducts } from "../services";
-import { setMatchedProducts, setProduct } from "../redux/actions";
+import { setMatchedProducts } from "../redux/actions";
 import Logo from "../assets/logo__small@2x.png";
 import LogoXL from "../assets/logo.png";
 
